@@ -1,0 +1,31 @@
+#start_page {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background: rgb(21, 21, 21);
+}
+
+#single_json {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  background: rgb(21, 21, 21);
+  display: none;
+}
+
+#zip_json {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  background: rgb(21, 21, 21);
+  display: none;
+}
