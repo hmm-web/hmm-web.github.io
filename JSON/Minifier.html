@@ -8,17 +8,17 @@
       content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,width=device-width,user-scalable=no"
     />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta content="JSON Deobfuscator" property="og:title" />
-    <meta content="A tool to deobfuscate JSON code into something easier to read." property="og:description" />
-    <meta content="https://hmm-web.github.io/pages/JSON/Deobfuscator" property="og:url" />
-    <meta content="https://raw.githubusercontent.com/hmm-web/pages/main/JSON/icon.png" property="og:image" />
+    <meta content="JSON Minifier" property="og:title" />
+    <meta content="A tool to obfuscate JSON code into something more difficult to read." property="og:description" />
+    <meta content="https://hmm-web.github.io/pages/JSON/Minifier" property="og:url" />
+    <meta content="https://raw.githubusercontent.com/hmm-web/pages/main/JSON/icon3.png" property="og:image" />
     <meta content="#000000" data-react-helmet="true" name="theme-color" />
     <meta name="google" content="notranslate" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="pages.css" />
     <link rel="stylesheet" href="resize.css" />
-    <link rel="icon" href="icon.ico" />
-    <title>JSON Deobfuscator</title>
+    <link rel="icon" href="icon3.ico" />
+    <title>JSON Minifier</title>
     <!-- I apologise for my terrible code and my use of libraries for stuff like saving files. I also apologise if I didn't do the licensing thingy correctly. -->
     <script
       type="text/javascript"
@@ -28,12 +28,12 @@
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.js"
     ></script>
-<script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
   </head>
   <body>
     <img id="backbtn" />
     <div id="start_page">
-      <h2 id="start_title" class="title">JSON Deobfuscator</h2>
+      <h2 id="start_title" class="title">JSON Minifier</h2>
       <div class="start_btns">
         <div id="txtpagebtn" class="select">
           <img style="height: 80%; content: url('txt.png'); margin-right: 8%" />
@@ -57,7 +57,7 @@
       >
     </div>
     <div id="single_json">
-      <h2 class="title">JSON Deobfuscator</h2>
+      <h2 class="title">JSON Minifier</h2>
       <div class="textarea">
         <div id="textarea_options">
           <div style="opacity: 1 !important" class="small_btns">
@@ -73,12 +73,16 @@
         </div>
         <img class="small_btns" id="copy_small" />
         <textarea
-          placeholder='{"\u004a\u0053\u004f\u004e":{"\u0044\u0065\u006f\u0062\u0066\u0075\u0073\u0063\u0061\u0074\u0065\u0064":true}}'
-          autocomplete="off" autocapitalize="off" spellcheck="false"
+          placeholder='{
+   "JSON": {
+      "Minified": false
+   }
+}'
+autocomplete="off" autocapitalize="off" spellcheck="false"
           id="deez"
         ></textarea>
       </div>
-      <button id="deobfuscate_txt" class="button">Deobfuscate</button>
+      <button id="deobfuscate_txt" class="button">Obfuscate</button>
       <p
         style="
           display: none;
@@ -91,7 +95,7 @@
     </div>
 
     <div id="zip_json">
-      <h2 id="uploadtitle" class="title">JSON Deobfuscator</h2>
+      <h2 id="uploadtitle" class="title">JSON Minifier</h2>
       <p
         style="
           color: grey;
@@ -190,7 +194,7 @@
           "
         />
         <button id="upload_zip_btn" class="button">
-          Start Zip Deobfuscation
+          Start Zip Obfuscation
         </button>
       </div>
       <div id="finished">
@@ -226,7 +230,7 @@
     <script type="module" src="script.js"></script>
     <script>
       console.log(
-        "⡯⡯⡾⠝⠘⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢊⠘⡮⣣⠪⠢⡑⡌ ㅤ\n⠟⠝⠈⠀⠀⠀. ⠡⠀⠠⢈⠠⢐⢠⢂⢔⣐⢄⡂⢔⠀⡁⢉⠸⢨⢑⠕⡌ ㅤ ⠀\n⠀ ⡀⠁⠀⠀⠀⡀⢂⠡⠈⡔⣕⢮⣳⢯⣿⣻⣟⣯⣯⢷⣫⣆⡂ ⢐⠑⡌\n⢀⠠⠐⠈⠀⢀⢂⠢⡂⠕⡁⣝⢮⣳⢽⡽⣾⣻⣿⣯⡯⣟⣞⢾⢜⢆⠀⡀⠀⠪\n⣬⠂⠀⠀⢀⢂⢪⠨⢂⠥⣺⡪⣗⢗⣽⢽⡯⣿⣽⣷⢿⡽⡾⡽⣝⢎⠀⠀⠀⢡\n⣿⠀⠀⠀⢂⠢⢂⢥⢱⡹⣪⢞⡵⣻⡪⡯⡯⣟⡾⣿⣻⡽⣯⡻⣪⠧⠑⠀⠁⢐\n⣿⠀⠀⠀⠢⢑⠠⠑⠕⡝⡎⡗⡝⡎⣞⢽⡹⣕⢯⢻⠹⡹⢚⠝⡷⡽⡨⠀⠀⢔\n⣿⡯⠀⢈⠈⢄⠂⠂⠐⠀⠌⠠⢑⠱⡱⡱⡑⢔⠁⠀⡀⠐⠐⠐⡡⡹⣪⠀⠀⢘\n⣿⣽⠀⡀⡊⠀⠐⠨⠈⡁⠂⢈⠠⡱⡽⣷⡑⠁⠠⠑⠀⢉⢇⣤⢘⣪⢽⠀⢌⢎\n⣿⢾⠀⢌⠌⠀⡁⠢⠂⠐⡀⠀⢀⢳⢽⣽⡺⣨⢄⣑⢉⢃⢭⡲⣕⡭⣹⠠⢐⢗\n⣿⡗⠀⠢⠡⡱⡸⣔⢵⢱⢸⠈⠀⡪⣳⣳⢹⢜⡵⣱⢱⡱⣳⡹⣵⣻⢔⢅⢬⡷\n⣷⡇⡂⠡⡑⢕⢕⠕⡑⠡⢂⢊⢐⢕⡝⡮⡧⡳⣝⢴⡐⣁⠃⡫⡒⣕⢏⡮⣷⡟\n⣷⣻⣅⠑⢌⠢⠁⢐⠠⠑⡐⠐⠌⡪⠮⡫⠪⡪⡪⣺⢸⠰⠡⠠⠐⢱⠨⡪⡪⡰\n⣯⢷⣟⣇⡂⡂⡌⡀⠀⠁⡂⠅⠂⠀⡑⡄⢇⠇⢝⡨⡠⡁⢐⠠⢀⢪⡐⡜⡪⡊\n⣿⢽⡾⢹⡄⠕⡅⢇⠂⠑⣴⡬⣬⣬⣆⢮⣦⣷⣵⣷⡗⢃⢮⠱⡸⢰⢱⢸⢨⢌\n⣯⢯⣟⠸⣳⡅⠜⠔⡌⡐⠈⠻⠟⣿⢿⣿⣿⠿⡻⣃⠢⣱⡳⡱⡩⢢⠣⡃⠢⠁\n⡯⣟⣞⡇⡿⣽⡪⡘⡰⠨⢐⢀⠢⢢⢄⢤⣰⠼⡾⢕⢕⡵⣝⠎⢌⢪⠪⡘⡌⠀\n⡯⣳⠯⠚⢊⠡⡂⢂⠨⠊⠔⡑⠬⡸⣘⢬⢪⣪⡺⡼⣕⢯⢞⢕⢝⠎⢻⢼⣀⠀\n⠁⡂⠔⡁⡢⠣⢀⠢⠀⠅⠱⡐⡱⡘⡔⡕⡕⣲⡹⣎⡮⡏⡑⢜⢼⡱⢩⣗⣯⣟\n⢀⢂⢑⠀⡂⡃⠅⠊⢄⢑⠠⠑⢕⢕⢝⢮⢺⢕⢟⢮⢊⢢⢱⢄⠃⣇⣞⢞⣞⢾\n⢀⠢⡑⡀⢂⢊⠠⠁⡂⡐⠀⠅⡈⠪⠪⠪⠣⠫⠑⡁⢔⠕⣜⣜⢦⡰⡎⡯⡾⡽"
+        "⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄\n⠄⠄⠄⠄⠄⠄⠄⣀⣀⣐⡀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄\n⠄⠄⢠⠄⣠⣶⣿⣿⣿⠿⠿⣛⣂⣀⣀⡒⠶⣶⣤⣤⣬⣀⡀⠄⢀⠄⠄⠄⠄⠄⠄⠄\n⠄⠄⢀⣾⣿⣿⣿⡟⢡⢾⣿⣿⣿⣿⣿⣿⣶⣌⠻⣿⣿⣿⣿⣷⣦⣄⡀⠄⠄⠄⠄⠄\n⠄⠄⣈⣉⡛⣿⣿⣿⡌⢇⢻⣿⣿⣿⣿⣿⠿⠛⣡⣿⣿⣿⣿⣿⣿⣿⣿⣦⣄⠄⠄⠄\n⠄⠺⠟⣉⣴⡿⠛⣩⣾⣎⠳⠿⠛⣋⣩⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣆⠄⠄\n⠄⠄⠄⠘⢋⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆⠄\n⠄⠄⢀⢀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠄\n⠄⠄⠄⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⣀\n⠄⠄⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠃⠘⠛\n⠄⠄⠄⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠋⣀⣀⣠⣤\n⠄⠄⣀⣀⡙⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⢛⣩⠤⠾⠄⠛⠋⠉⢉\n⠄⠺⠿⠛⠛⠃⠄⠉⠙⠛⠛⠻⠿⠿⠿⠟⠛⠛⠛⠉⠁⠄⠄⣀⣀⣠⣤⣠⣴⣶⣼⣿"
       );
     </script>
   </body>
