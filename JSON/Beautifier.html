@@ -8,17 +8,17 @@
       content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,width=device-width,user-scalable=no"
     />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta content="JSON Obfuscator" property="og:title" />
-    <meta content="A tool to obfuscate JSON code into something more difficult to read." property="og:description" />
-    <meta content="https://hmm-web.github.io/pages/JSON/Obfuscator" property="og:url" />
-    <meta content="https://raw.githubusercontent.com/hmm-web/pages/main/JSON/icon2.png" property="og:image" />
+    <meta content="JSON Beautifier" property="og:title" />
+    <meta content="A tool to beautify JSON code into something easier to read." property="og:description" />
+    <meta content="https://hmm-web.github.io/pages/JSON/Deobfuscator" property="og:url" />
+    <meta content="https://raw.githubusercontent.com/hmm-web/pages/main/JSON/icon.png" property="og:image" />
     <meta content="#000000" data-react-helmet="true" name="theme-color" />
     <meta name="google" content="notranslate" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="pages.css" />
     <link rel="stylesheet" href="resize.css" />
-    <link rel="icon" href="icon2.ico" />
-    <title>JSON Obfuscator</title>
+    <link rel="icon" href="icon.ico" />
+    <title>JSON Beautifier</title>
     <!-- I apologise for my terrible code and my use of libraries for stuff like saving files. I also apologise if I didn't do the licensing thingy correctly. -->
     <script
       type="text/javascript"
@@ -34,7 +34,7 @@
   <body>
     <img id="backbtn" />
     <div id="start_page">
-      <h2 id="start_title" class="title">JSON Obfuscator</h2>
+      <h2 id="start_title" class="title">JSON Beautifier</h2>
       <div class="start_btns">
         <div id="txtpagebtn" class="select">
           <img style="height: 80%; content: url('txt.png'); margin-right: 8%" />
@@ -58,7 +58,7 @@
       >
     </div>
     <div id="single_json">
-      <h2 class="title">JSON Obfuscator</h2>
+      <h2 class="title">JSON Beautifier</h2>
       <div class="textarea">
         <div id="textarea_options">
           <div style="opacity: 1 !important" class="small_btns">
@@ -74,16 +74,12 @@
         </div>
         <img class="small_btns" id="copy_small" />
         <textarea
-          placeholder='{
-   "JSON": {
-      "Obfuscated": false
-   }
-}'
-autocomplete="off" autocapitalize="off" spellcheck="false"
+          placeholder='{"JSON":{"Beautified": false}}'
+          autocomplete="off" autocapitalize="off" spellcheck="false"
           id="deez"
         ></textarea>
       </div>
-      <button id="deobfuscate_txt" class="button">Obfuscate</button>
+      <button id="deobfuscate_txt" class="button">Beautify</button>
       <p
         style="
           display: none;
@@ -96,7 +92,7 @@ autocomplete="off" autocapitalize="off" spellcheck="false"
     </div>
 
     <div id="zip_json">
-      <h2 id="uploadtitle" class="title">JSON Obfuscator</h2>
+      <h2 id="uploadtitle" class="title">JSON Beautifier</h2>
       <p
         style="
           color: grey;
@@ -195,7 +191,7 @@ autocomplete="off" autocapitalize="off" spellcheck="false"
           "
         />
         <button id="upload_zip_btn" class="button">
-          Start Obfuscation
+          Start Beautification
         </button>
       </div>
       <div id="finished">
@@ -231,7 +227,7 @@ autocomplete="off" autocapitalize="off" spellcheck="false"
     <script type="module" src="script.js"></script>
     <script>
       console.log(
-        "⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄\n⠄⠄⠄⠄⠄⠄⠄⣀⣀⣐⡀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄\n⠄⠄⢠⠄⣠⣶⣿⣿⣿⠿⠿⣛⣂⣀⣀⡒⠶⣶⣤⣤⣬⣀⡀⠄⢀⠄⠄⠄⠄⠄⠄⠄\n⠄⠄⢀⣾⣿⣿⣿⡟⢡⢾⣿⣿⣿⣿⣿⣿⣶⣌⠻⣿⣿⣿⣿⣷⣦⣄⡀⠄⠄⠄⠄⠄\n⠄⠄⣈⣉⡛⣿⣿⣿⡌⢇⢻⣿⣿⣿⣿⣿⠿⠛⣡⣿⣿⣿⣿⣿⣿⣿⣿⣦⣄⠄⠄⠄\n⠄⠺⠟⣉⣴⡿⠛⣩⣾⣎⠳⠿⠛⣋⣩⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣆⠄⠄\n⠄⠄⠄⠘⢋⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆⠄\n⠄⠄⢀⢀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠄\n⠄⠄⠄⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⣀\n⠄⠄⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠃⠘⠛\n⠄⠄⠄⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠋⣀⣀⣠⣤\n⠄⠄⣀⣀⡙⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⢛⣩⠤⠾⠄⠛⠋⠉⢉\n⠄⠺⠿⠛⠛⠃⠄⠉⠙⠛⠛⠻⠿⠿⠿⠟⠛⠛⠛⠉⠁⠄⠄⣀⣀⣠⣤⣠⣴⣶⣼⣿"
+        "⡯⡯⡾⠝⠘⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢊⠘⡮⣣⠪⠢⡑⡌ ㅤ\n⠟⠝⠈⠀⠀⠀. ⠡⠀⠠⢈⠠⢐⢠⢂⢔⣐⢄⡂⢔⠀⡁⢉⠸⢨⢑⠕⡌ ㅤ ⠀\n⠀ ⡀⠁⠀⠀⠀⡀⢂⠡⠈⡔⣕⢮⣳⢯⣿⣻⣟⣯⣯⢷⣫⣆⡂ ⢐⠑⡌\n⢀⠠⠐⠈⠀⢀⢂⠢⡂⠕⡁⣝⢮⣳⢽⡽⣾⣻⣿⣯⡯⣟⣞⢾⢜⢆⠀⡀⠀⠪\n⣬⠂⠀⠀⢀⢂⢪⠨⢂⠥⣺⡪⣗⢗⣽⢽⡯⣿⣽⣷⢿⡽⡾⡽⣝⢎⠀⠀⠀⢡\n⣿⠀⠀⠀⢂⠢⢂⢥⢱⡹⣪⢞⡵⣻⡪⡯⡯⣟⡾⣿⣻⡽⣯⡻⣪⠧⠑⠀⠁⢐\n⣿⠀⠀⠀⠢⢑⠠⠑⠕⡝⡎⡗⡝⡎⣞⢽⡹⣕⢯⢻⠹⡹⢚⠝⡷⡽⡨⠀⠀⢔\n⣿⡯⠀⢈⠈⢄⠂⠂⠐⠀⠌⠠⢑⠱⡱⡱⡑⢔⠁⠀⡀⠐⠐⠐⡡⡹⣪⠀⠀⢘\n⣿⣽⠀⡀⡊⠀⠐⠨⠈⡁⠂⢈⠠⡱⡽⣷⡑⠁⠠⠑⠀⢉⢇⣤⢘⣪⢽⠀⢌⢎\n⣿⢾⠀⢌⠌⠀⡁⠢⠂⠐⡀⠀⢀⢳⢽⣽⡺⣨⢄⣑⢉⢃⢭⡲⣕⡭⣹⠠⢐⢗\n⣿⡗⠀⠢⠡⡱⡸⣔⢵⢱⢸⠈⠀⡪⣳⣳⢹⢜⡵⣱⢱⡱⣳⡹⣵⣻⢔⢅⢬⡷\n⣷⡇⡂⠡⡑⢕⢕⠕⡑⠡⢂⢊⢐⢕⡝⡮⡧⡳⣝⢴⡐⣁⠃⡫⡒⣕⢏⡮⣷⡟\n⣷⣻⣅⠑⢌⠢⠁⢐⠠⠑⡐⠐⠌⡪⠮⡫⠪⡪⡪⣺⢸⠰⠡⠠⠐⢱⠨⡪⡪⡰\n⣯⢷⣟⣇⡂⡂⡌⡀⠀⠁⡂⠅⠂⠀⡑⡄⢇⠇⢝⡨⡠⡁⢐⠠⢀⢪⡐⡜⡪⡊\n⣿⢽⡾⢹⡄⠕⡅⢇⠂⠑⣴⡬⣬⣬⣆⢮⣦⣷⣵⣷⡗⢃⢮⠱⡸⢰⢱⢸⢨⢌\n⣯⢯⣟⠸⣳⡅⠜⠔⡌⡐⠈⠻⠟⣿⢿⣿⣿⠿⡻⣃⠢⣱⡳⡱⡩⢢⠣⡃⠢⠁\n⡯⣟⣞⡇⡿⣽⡪⡘⡰⠨⢐⢀⠢⢢⢄⢤⣰⠼⡾⢕⢕⡵⣝⠎⢌⢪⠪⡘⡌⠀\n⡯⣳⠯⠚⢊⠡⡂⢂⠨⠊⠔⡑⠬⡸⣘⢬⢪⣪⡺⡼⣕⢯⢞⢕⢝⠎⢻⢼⣀⠀\n⠁⡂⠔⡁⡢⠣⢀⠢⠀⠅⠱⡐⡱⡘⡔⡕⡕⣲⡹⣎⡮⡏⡑⢜⢼⡱⢩⣗⣯⣟\n⢀⢂⢑⠀⡂⡃⠅⠊⢄⢑⠠⠑⢕⢕⢝⢮⢺⢕⢟⢮⢊⢢⢱⢄⠃⣇⣞⢞⣞⢾\n⢀⠢⡑⡀⢂⢊⠠⠁⡂⡐⠀⠅⡈⠪⠪⠪⠣⠫⠑⡁⢔⠕⣜⣜⢦⡰⡎⡯⡾⡽"
       );
     </script>
   </body>
