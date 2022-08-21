@@ -20,15 +20,13 @@
     <link rel="icon" href="JSONFormatterAssets/icon.ico" />
     <title>JSON Beautifier</title>
     <!-- I apologise for my terrible code and my use of libraries for stuff like saving files. I also apologise if I didn't do the licensing thingy correctly. -->
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.js"
-    ></script>
-        <script src="https://cdn.jsdelivr.net/gh/beautify-web/js-beautify@v1.13.0/js/lib/beautify.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/js-beautify@1.14.6/js/lib/beautify.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/core-js-bundle@3.24.1/minified.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </head>
   <body>
     <img id="backbtn" />
@@ -53,8 +51,17 @@
           color: rgb(120, 120, 120);
         "
         href="JSONFormatterAssets/html/licenses.htm"
-        >Acknowledgements</a
-      >
+        >Acknowledgements</a>
+        <a
+        style="
+          user-select: none;
+          position: fixed;
+          right: 0;
+          bottom: 0;
+          color: rgb(120, 120, 120);
+        "
+        href="http://www.jsdelivr.com/terms"
+        >JSDelivr Terms & Policies</a>
     </div>
     <div id="single_json">
       <h2 class="title">JSON Beautifier</h2>
