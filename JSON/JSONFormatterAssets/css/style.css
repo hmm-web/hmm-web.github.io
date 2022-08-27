@@ -194,6 +194,14 @@ textarea:focus {
   background: rgb(40, 40, 40);
 }
 
+.roundy {
+  border-radius: calc(50vw + 50vh);
+  transition: border-radius 0.1s;
+}
+.roundy:hover:active {
+  border-radius: calc(0.2vw + 0.2vw);
+}
+
 .start_btns {
   width: calc(26vw + 26vh);
   max-width: 70%;
