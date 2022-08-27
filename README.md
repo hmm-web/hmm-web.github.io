@@ -1,1 +1,1 @@
-Just an ordinary repository for github pages.
+Just a repository for github pages.
