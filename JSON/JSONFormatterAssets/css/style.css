@@ -197,6 +197,9 @@ textarea:focus {
 .roundy {
   border-radius: calc(50vw + 50vh);
   transition: border-radius 0.1s;
+  -webkit-transition: border-radius 0.1s;
+  -moz-transition: border-radius 0.1s;
+  -o-transition: border-radius 0.1s;
 }
 .roundy:hover:active {
   border-radius: calc(0.2vw + 0.2vw);
