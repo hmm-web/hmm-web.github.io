@@ -1,1 +1,301 @@
-<!DOCTYPE html><html lang="en" class="notranslate" translate="no"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="initial-scale=1,minimum-scale=1,maximum-scale=1,width=device-width,user-scalable=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta content="JSON Formatter" property="og:title"><meta content="Some tools to format your JSON code." property="og:description"><meta content="https://hmm-web.github.io/pages/JSON/Formatter" property="og:url"><meta content="https://raw.githubusercontent.com/hmm-web/pages/main/JSON/JSONFormatterAssets/favicon.png" property="og:image"><meta content="#000000" data-react-helmet="true" name="theme-color"><meta name="google" content="notranslate"><link rel="stylesheet" href="JSONFormatterAssets/css/style.css"><link rel="stylesheet" href="JSONFormatterAssets/css/pages.css"><link rel="stylesheet" href="JSONFormatterAssets/css/resize.css"><link rel="icon" href="JSONFormatterAssets/favicon.ico"><title>JSON Formatter</title><script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdn.jsdelivr.net/npm/js-beautify@1.14.6/js/lib/beautify.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script>console.log("⡯⡯⡾⠝⠘⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢊⠘⡮⣣⠪⠢⡑⡌ ㅤ\n⠟⠝⠈⠀⠀⠀. ⠡⠀⠠⢈⠠⢐⢠⢂⢔⣐⢄⡂⢔⠀⡁⢉⠸⢨⢑⠕⡌ ㅤ ⠀\n⠀ ⡀⠁⠀⠀⠀⡀⢂⠡⠈⡔⣕⢮⣳⢯⣿⣻⣟⣯⣯⢷⣫⣆⡂ ⢐⠑⡌\n⢀⠠⠐⠈⠀⢀⢂⠢⡂⠕⡁⣝⢮⣳⢽⡽⣾⣻⣿⣯⡯⣟⣞⢾⢜⢆⠀⡀⠀⠪\n⣬⠂⠀⠀⢀⢂⢪⠨⢂⠥⣺⡪⣗⢗⣽⢽⡯⣿⣽⣷⢿⡽⡾⡽⣝⢎⠀⠀⠀⢡\n⣿⠀⠀⠀⢂⠢⢂⢥⢱⡹⣪⢞⡵⣻⡪⡯⡯⣟⡾⣿⣻⡽⣯⡻⣪⠧⠑⠀⠁⢐\n⣿⠀⠀⠀⠢⢑⠠⠑⠕⡝⡎⡗⡝⡎⣞⢽⡹⣕⢯⢻⠹⡹⢚⠝⡷⡽⡨⠀⠀⢔\n⣿⡯⠀⢈⠈⢄⠂⠂⠐⠀⠌⠠⢑⠱⡱⡱⡑⢔⠁⠀⡀⠐⠐⠐⡡⡹⣪⠀⠀⢘\n⣿⣽⠀⡀⡊⠀⠐⠨⠈⡁⠂⢈⠠⡱⡽⣷⡑⠁⠠⠑⠀⢉⢇⣤⢘⣪⢽⠀⢌⢎\n⣿⢾⠀⢌⠌⠀⡁⠢⠂⠐⡀⠀⢀⢳⢽⣽⡺⣨⢄⣑⢉⢃⢭⡲⣕⡭⣹⠠⢐⢗\n⣿⡗⠀⠢⠡⡱⡸⣔⢵⢱⢸⠈⠀⡪⣳⣳⢹⢜⡵⣱⢱⡱⣳⡹⣵⣻⢔⢅⢬⡷\n⣷⡇⡂⠡⡑⢕⢕⠕⡑⠡⢂⢊⢐⢕⡝⡮⡧⡳⣝⢴⡐⣁⠃⡫⡒⣕⢏⡮⣷⡟\n⣷⣻⣅⠑⢌⠢⠁⢐⠠⠑⡐⠐⠌⡪⠮⡫⠪⡪⡪⣺⢸⠰⠡⠠⠐⢱⠨⡪⡪⡰\n⣯⢷⣟⣇⡂⡂⡌⡀⠀⠁⡂⠅⠂⠀⡑⡄⢇⠇⢝⡨⡠⡁⢐⠠⢀⢪⡐⡜⡪⡊\n⣿⢽⡾⢹⡄⠕⡅⢇⠂⠑⣴⡬⣬⣬⣆⢮⣦⣷⣵⣷⡗⢃⢮⠱⡸⢰⢱⢸⢨⢌\n⣯⢯⣟⠸⣳⡅⠜⠔⡌⡐⠈⠻⠟⣿⢿⣿⣿⠿⡻⣃⠢⣱⡳⡱⡩⢢⠣⡃⠢⠁\n⡯⣟⣞⡇⡿⣽⡪⡘⡰⠨⢐⢀⠢⢢⢄⢤⣰⠼⡾⢕⢕⡵⣝⠎⢌⢪⠪⡘⡌⠀\n⡯⣳⠯⠚⢊⠡⡂⢂⠨⠊⠔⡑⠬⡸⣘⢬⢪⣪⡺⡼⣕⢯⢞⢕⢝⠎⢻⢼⣀⠀\n⠁⡂⠔⡁⡢⠣⢀⠢⠀⠅⠱⡐⡱⡘⡔⡕⡕⣲⡹⣎⡮⡏⡑⢜⢼⡱⢩⣗⣯⣟\n⢀⢂⢑⠀⡂⡃⠅⠊⢄⢑⠠⠑⢕⢕⢝⢮⢺⢕⢟⢮⢊⢢⢱⢄⠃⣇⣞⢞⣞⢾\n⢀⠢⡑⡀⢂⢊⠠⠁⡂⡐⠀⠅⡈⠪⠪⠪⠣⠫⠑⡁⢔⠕⣜⣜⢦⡰⡎⡯⡾⡽")</script></head><body><noscript>javascript is required for the page to function!</noscript><img id="backbtn"><div id="selector_page"><h2 id="start__title" class="title">JSON Formatter</h2><p style="font-size:calc(1vw + 1vh);color:#a9a9a9">Choose</p><div class="start_btns"><div id="minify_select" class="select roundy"><h1>Minifier</h1></div><div id="beautify_select" class="select roundy"><h1>Beautifier</h1></div><div id="uglify_select" class="select roundy"><h1>Uglifier</h1></div></div><a style="user-select:none;position:absolute;left:0;bottom:0;color:#787878" href="JSONFormatterAssets/html/acknowledgements.htm">Acknowledgements</a><a style="user-select:none;position:absolute;right:0;bottom:0;color:#787878" href="https://www.jsdelivr.com/terms">JSDelivr Terms & Policies</a></div><div id="start_page"><h2 id="start_title" class="title">JSON Beautifier</h2><div class="start_btns"><div id="txtpagebtn" class="select"><img style="height:80%;content:url(JSONFormatterAssets/txt.png);margin-right:8%"><span>Text</span></div><div id="uppagebtn" class="select"><img style="height:81%;content:url(JSONFormatterAssets/zip.png);margin-right:8%"><span>Zip</span></div></div></div><div id="single_json"><h2 id="title2" class="title">JSON Beautifier</h2><div class="textarea"><div id="textarea_options"><div style="opacity:1!important" class="small_btns"><label for="upload_txt"><img class="small_btns" id="upload_small"></label><input style="display:none" id="upload_txt" type="file"></div></div><img class="small_btns" id="copy_small"><textarea placeholder='{"JSON":{"Beautified": false}}' autocomplete="off" autocapitalize="off" spellcheck="false" id="deez"></textarea></div><button id="deobfuscate_txt" class="button">Beautify</button><p style="display:none;color:#ee3343;position:fixed;bottom:0" id="err0r"></p></div><div id="zip_json"><h2 id="uploadtitle" class="title">JSON Beautifier</h2><label for="upload_zip_input"><div class="button" id="uploadzip">Upload Zip</div><input style="display:none" id="upload_zip_input" type="file"></label><div id="zipoptions"><h3>Options</h3><hr style="border:none;height:calc(.2vw + .2vh);background:#2a2a2a;margin-bottom:calc(.52vw + .52vh)"><p style="font-size:calc(1vw + 1vh)">Separate file extensions using<span style="background:#2a2a2a;color:#d3d3d3;margin:calc(.1vw + .1vh)">/</span>.</p><p style="color:grey;margin:calc(.2vw + .2vh);font-size:calc(.7vw + .7vh)">(JSON files can use different file extensions.)</p><input placeholder="File extension filter." autocapitalize="off" spellcheck="false" value="json/material/tar/zip/gz/rar/7z" type="text" id="extensions_holder" class="textbox"><p style="font-size:calc(1vw + 1vh);margin-top:calc(1vw + 1vh)">Compression level (<span style="background:#2a2a2a;color:#d3d3d3;font-size:calc(1vw + 1vh);margin:calc(.1vw + .1vh)">0</span>to<span style="background:#2a2a2a;color:#d3d3d3;font-size:calc(1vw + 1vh);margin:calc(.1vw + .1vh)">9</span>).</p><p style="color:grey;margin:calc(.2vw + .2vh);font-size:calc(.7vw + .7vh)">(Lower is faster but bigger and higher is smaller but heavier for weak devices.)</p><input placeholder="Compression level." autocapitalize="off" spellcheck="false" value="2" type="number" min="0" max="9" id="compression_level_holder" class="textbox" style="height:calc(1.9vw + 1.9vh);margin-bottom:calc(.1vw + .1vh)"><p style="color:grey;margin:calc(.1vw + .1vh);font-size:calc(.9vw + .9vh)" id="remove_zip_note">(Zip feature may cause freezing and lag with big files/weak devices)</p><button id="upload_zip_btn" class="button">Start Beautification</button></div><div id="finished"><div id="zip_success"></div><div id="spinner_zip"></div><div id="contain_zip_bar"><div id="loading_zip_bar"><div id="loading_zip_bar_progress" style="display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-moz-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-moz-box-align:center;-ms-flex-align:center;align-items:center;height:100%;-webkit-transition:width .1s;-moz-transition:width .1s;transition:width .1s;width:0%;background:#e6e6e6"><h5 id="zip_bar_num" style="text-shadow:0 0 #000;color:#000">0%</h5></div></div></div></div></div><script type="text/javascript" src="JSONFormatterAssets/js/script.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en" class="notranslate" translate="no">
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,width=device-width,user-scalable=no"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta content="JSON Formatter" property="og:title" />
+    <meta
+      content="Some tools to format your JSON code."
+      property="og:description"
+    />
+    <meta
+      content="https://hmm-web.github.io/pages/JSON/Formatter"
+      property="og:url"
+    />
+    <meta
+      content="https://raw.githubusercontent.com/hmm-web/pages/main/JSON/JSONFormatterAssets/favicon.png"
+      property="og:image"
+    />
+    <meta content="#000000" data-react-helmet="true" name="theme-color" />
+    <meta name="google" content="notranslate" />
+    <link rel="stylesheet" href="JSONFormatterAssets/css/style.css" />
+    <link rel="stylesheet" href="JSONFormatterAssets/css/pages.css" />
+    <link rel="stylesheet" href="JSONFormatterAssets/css/resize.css" />
+    <link rel="icon" href="JSONFormatterAssets/favicon.ico" />
+    <title>JSON Formatter</title>
+    <!-- I apologise for my terrible code and my over reliance on libraries. I also apologise if I didn't do the licensing thingy correctly. -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/js-beautify@1.14.6/js/lib/beautify.min.js"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      console.log(
+        "⡯⡯⡾⠝⠘⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢊⠘⡮⣣⠪⠢⡑⡌ ㅤ\n⠟⠝⠈⠀⠀⠀. ⠡⠀⠠⢈⠠⢐⢠⢂⢔⣐⢄⡂⢔⠀⡁⢉⠸⢨⢑⠕⡌ ㅤ ⠀\n⠀ ⡀⠁⠀⠀⠀⡀⢂⠡⠈⡔⣕⢮⣳⢯⣿⣻⣟⣯⣯⢷⣫⣆⡂ ⢐⠑⡌\n⢀⠠⠐⠈⠀⢀⢂⠢⡂⠕⡁⣝⢮⣳⢽⡽⣾⣻⣿⣯⡯⣟⣞⢾⢜⢆⠀⡀⠀⠪\n⣬⠂⠀⠀⢀⢂⢪⠨⢂⠥⣺⡪⣗⢗⣽⢽⡯⣿⣽⣷⢿⡽⡾⡽⣝⢎⠀⠀⠀⢡\n⣿⠀⠀⠀⢂⠢⢂⢥⢱⡹⣪⢞⡵⣻⡪⡯⡯⣟⡾⣿⣻⡽⣯⡻⣪⠧⠑⠀⠁⢐\n⣿⠀⠀⠀⠢⢑⠠⠑⠕⡝⡎⡗⡝⡎⣞⢽⡹⣕⢯⢻⠹⡹⢚⠝⡷⡽⡨⠀⠀⢔\n⣿⡯⠀⢈⠈⢄⠂⠂⠐⠀⠌⠠⢑⠱⡱⡱⡑⢔⠁⠀⡀⠐⠐⠐⡡⡹⣪⠀⠀⢘\n⣿⣽⠀⡀⡊⠀⠐⠨⠈⡁⠂⢈⠠⡱⡽⣷⡑⠁⠠⠑⠀⢉⢇⣤⢘⣪⢽⠀⢌⢎\n⣿⢾⠀⢌⠌⠀⡁⠢⠂⠐⡀⠀⢀⢳⢽⣽⡺⣨⢄⣑⢉⢃⢭⡲⣕⡭⣹⠠⢐⢗\n⣿⡗⠀⠢⠡⡱⡸⣔⢵⢱⢸⠈⠀⡪⣳⣳⢹⢜⡵⣱⢱⡱⣳⡹⣵⣻⢔⢅⢬⡷\n⣷⡇⡂⠡⡑⢕⢕⠕⡑⠡⢂⢊⢐⢕⡝⡮⡧⡳⣝⢴⡐⣁⠃⡫⡒⣕⢏⡮⣷⡟\n⣷⣻⣅⠑⢌⠢⠁⢐⠠⠑⡐⠐⠌⡪⠮⡫⠪⡪⡪⣺⢸⠰⠡⠠⠐⢱⠨⡪⡪⡰\n⣯⢷⣟⣇⡂⡂⡌⡀⠀⠁⡂⠅⠂⠀⡑⡄⢇⠇⢝⡨⡠⡁⢐⠠⢀⢪⡐⡜⡪⡊\n⣿⢽⡾⢹⡄⠕⡅⢇⠂⠑⣴⡬⣬⣬⣆⢮⣦⣷⣵⣷⡗⢃⢮⠱⡸⢰⢱⢸⢨⢌\n⣯⢯⣟⠸⣳⡅⠜⠔⡌⡐⠈⠻⠟⣿⢿⣿⣿⠿⡻⣃⠢⣱⡳⡱⡩⢢⠣⡃⠢⠁\n⡯⣟⣞⡇⡿⣽⡪⡘⡰⠨⢐⢀⠢⢢⢄⢤⣰⠼⡾⢕⢕⡵⣝⠎⢌⢪⠪⡘⡌⠀\n⡯⣳⠯⠚⢊⠡⡂⢂⠨⠊⠔⡑⠬⡸⣘⢬⢪⣪⡺⡼⣕⢯⢞⢕⢝⠎⢻⢼⣀⠀\n⠁⡂⠔⡁⡢⠣⢀⠢⠀⠅⠱⡐⡱⡘⡔⡕⡕⣲⡹⣎⡮⡏⡑⢜⢼⡱⢩⣗⣯⣟\n⢀⢂⢑⠀⡂⡃⠅⠊⢄⢑⠠⠑⢕⢕⢝⢮⢺⢕⢟⢮⢊⢢⢱⢄⠃⣇⣞⢞⣞⢾\n⢀⠢⡑⡀⢂⢊⠠⠁⡂⡐⠀⠅⡈⠪⠪⠪⠣⠫⠑⡁⢔⠕⣜⣜⢦⡰⡎⡯⡾⡽"
+      );
+    </script>
+  </head>
+  <body>
+    <noscript> javascript is required for the page to function! </noscript>
+    <img id="backbtn" />
+
+    <div id="selector_page">
+      <h2 id="start__title" class="title">JSON Formatter</h2>
+      <p style="font-size: calc(1vw + 1vh); color: darkgrey">Choose</p>
+      <div class="start_btns">
+        <div id="minify_select" class="select roundy">
+          <h1>Minifier</h1>
+        </div>
+        <div id="beautify_select" class="select roundy">
+          <h1>Beautifier</h1>
+        </div>
+        <div id="uglify_select" class="select roundy">
+          <h1>Uglifier</h1>
+        </div>
+      </div>
+      <a
+        style="
+          user-select: none;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          color: rgb(120, 120, 120);
+        "
+        href="JSONFormatterAssets/html/acknowledgements.htm"
+        >Acknowledgements</a
+      >
+      <a
+        style="
+          user-select: none;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          color: rgb(120, 120, 120);
+        "
+        href="https://www.jsdelivr.com/terms"
+        >JSDelivr Terms & Policies</a
+      >
+    </div>
+
+    <div id="start_page">
+      <h2 id="start_title" class="title">JSON Beautifier</h2>
+      <div class="start_btns">
+        <div id="txtpagebtn" class="select">
+          <img
+            style="
+              height: 80%;
+              content: url('JSONFormatterAssets/txt.png');
+              margin-right: 8%;
+            "
+          />
+          <span>Text</span>
+        </div>
+        <div id="uppagebtn" class="select">
+          <img
+            style="
+              height: 81%;
+              content: url('JSONFormatterAssets/zip.png');
+              margin-right: 8%;
+            "
+          />
+          <span>Zip</span>
+        </div>
+      </div>
+    </div>
+    <div id="single_json">
+      <h2 id="title2" class="title">JSON Beautifier</h2>
+      <div class="textarea">
+        <div id="textarea_options">
+          <div style="opacity: 1 !important" class="small_btns">
+            <label for="upload_txt">
+              <img class="small_btns" id="upload_small" />
+            </label>
+            <input style="display: none" id="upload_txt" type="file" />
+          </div>
+        </div>
+        <img class="small_btns" id="copy_small" />
+        <textarea
+          placeholder='{"JSON":{"Beautified": false}}'
+          autocomplete="off"
+          autocapitalize="off"
+          spellcheck="false"
+          id="deez"
+        ></textarea>
+      </div>
+      <button id="deobfuscate_txt" class="button">Beautify</button>
+      <p
+        style="
+          display: none;
+          color: rgb(238, 51, 67);
+          position: fixed;
+          bottom: 0;
+        "
+        id="err0r"
+      ></p>
+    </div>
+
+    <div id="zip_json">
+      <h2 id="uploadtitle" class="title">JSON Beautifier</h2>
+      <label for="upload_zip_input">
+        <div class="button" id="uploadzip">Upload Zip</div>
+        <input style="display: none" id="upload_zip_input" type="file" />
+      </label>
+      <div id="zipoptions">
+        <h3>Options</h3>
+        <hr
+          style="
+            border: none;
+            height: calc(0.2vw + 0.2vh);
+            background: rgb(42, 42, 42);
+            margin-bottom: calc(0.52vw + 0.52vh);
+          "
+        />
+        <p style="font-size: calc(1vw + 1vh)">
+          Separate file extensions using
+          <span
+            style="
+              background: rgb(42, 42, 42);
+              color: lightgrey;
+              margin: calc(0.1vw + 0.1vh);
+            "
+            >/</span
+          >.
+        </p>
+        <p
+          style="
+            color: grey;
+            margin: calc(0.2vw + 0.2vh);
+            font-size: calc(0.7vw + 0.7vh);
+          "
+        >
+          (JSON files can use different file extensions.)
+        </p>
+        <input
+          placeholder="File extension filter."
+          autocapitalize="off"
+          spellcheck="false"
+          value="json/material/tar/zip/gz/rar/7z"
+          type="text"
+          id="extensions_holder"
+          class="textbox"
+        />
+        <p style="font-size: calc(1vw + 1vh); margin-top: calc(1vw + 1vh)">
+          Compression level (<span
+            style="
+              background: rgb(42, 42, 42);
+              color: lightgrey;
+              font-size: calc(1vw + 1vh);
+              margin: calc(0.1vw + 0.1vh);
+            "
+            >0</span
+          >
+          to
+          <span
+            style="
+              background: rgb(42, 42, 42);
+              color: lightgrey;
+              font-size: calc(1vw + 1vh);
+              margin: calc(0.1vw + 0.1vh);
+            "
+            >9</span
+          >).
+        </p>
+        <p
+          style="
+            color: grey;
+            margin: calc(0.2vw + 0.2vh);
+            font-size: calc(0.7vw + 0.7vh);
+          "
+        >
+          (Lower is faster but bigger and higher is smaller but heavier for weak
+          devices.)
+        </p>
+        <input
+          placeholder="Compression level."
+          autocapitalize="off"
+          spellcheck="false"
+          value="2"
+          type="number"
+          min="0"
+          max="9"
+          id="compression_level_holder"
+          class="textbox"
+          style="
+            height: calc(1.9vw + 1.9vh);
+            margin-bottom: calc(0.1vw + 0.1vh);
+          "
+        />
+        <p
+          style="
+            color: grey;
+            margin: calc(0.1vw + 0.1vh);
+            font-size: calc(0.9vw + 0.9vh);
+          "
+          id="remove_zip_note"
+        >
+          (Zip feature may cause freezing and lag with big files/weak devices.)
+        </p>
+        <button id="upload_zip_btn" class="button">Start Beautification</button>
+      </div>
+      <div id="finished">
+        <div id="zip_success"></div>
+        <div id="spinner_zip"></div>
+        <div id="contain_zip_bar">
+          <div id="loading_zip_bar">
+            <div
+              id="loading_zip_bar_progress"
+              style="
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                -moz-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -moz-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                height: 100%;
+                -webkit-transition: width 0.1s;
+                -moz-transition: width 0.1s;
+                transition: width 0.1s;
+                width: 0%;
+                background: rgb(230, 230, 230);
+              "
+            >
+              <h5
+                id="zip_bar_num"
+                style="text-shadow: 0px 0px black; color: black"
+              >
+                0%
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      type="text/javascript"
+      src="JSONFormatterAssets/js/script.js"
+    ></script>
+  </body>
+</html>
