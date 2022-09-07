@@ -454,6 +454,7 @@ textarea:focus {
   position: absolute;
   bottom: calc(1vw + 1vh);
   height: calc(10vw + 10vh);
+  overflow: hidden;
   width: 100%;
   background: transparent;
   display: -webkit-box;
@@ -476,4 +477,5 @@ textarea:focus {
   border-radius: calc(0.3vw + 0.3vh);
   height: calc(2vw + 2vh);
   width: 100%;
+  overflow: hidden;
 }
