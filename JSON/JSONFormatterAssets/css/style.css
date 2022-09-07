@@ -1,6 +1,6 @@
 * {
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-x: visible;
+  overflow-y: visible;
   margin: 0;
   font-size: calc(1.2vw + 1.2vh);
   color: rgb(230, 230, 230);
