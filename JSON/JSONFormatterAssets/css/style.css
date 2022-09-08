@@ -21,7 +21,6 @@ body {
 .textarea {
   resize: both;
   top: 50%;
-  padding: calc(0.5vw + 0.5vh);
   max-height: calc(32vw + 32vh);
   max-width: calc(30vw + 30vh);
   min-height: calc(18vw + 18vh);
@@ -42,6 +41,7 @@ textarea {
   border: solid calc(0.2vw + 0.2vh) rgb(42, 42, 42);
   border-radius: calc(0.3vw + 0.3vh);
   text-align: left;
+  padding: calc(0.5vw + 0.5vh);
   font-size: calc(1vw + 1vh);
   -webkit-user-select: text;
   -moz-user-select: text;
