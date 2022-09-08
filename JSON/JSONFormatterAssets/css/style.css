@@ -1,3 +1,5 @@
+/*I am sorry if someone had to read this.*/
+
 * {
   overflow-x: visible;
   overflow-y: visible;
@@ -199,7 +201,8 @@ textarea:hover:active {
 }
 
 .roundy {
-  border-radius: calc(50vw + 50vh);
+  border-radius: calc(0.2vw + 0.2vh);
+  margin: calc(1vw + 1vh);
   transition: border-radius 0.1s;
   -webkit-transition: border-radius 0.1s;
   -moz-transition: border-radius 0.1s;
