@@ -242,7 +242,7 @@ textarea:hover:active {
   position: fixed;
   top: calc(0.1vw + 0.1vh);
   left: calc(0.1vw + 0.1vh);
-  height: calc(1.5vw + 1.5vh);
+  content: url("/JSONFormatterAssets/back.png");
   width: calc(1.5vw + 1.5vh);
   background: rgb(32, 32, 32);
   border: solid calc(0.2vw + 0.2vh) rgb(42, 42, 42);
@@ -258,15 +258,6 @@ textarea:hover:active {
   -moz-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
-}
-
-#backicon {
-  height: calc(1.6vw + 1.6vh);
-  content: url("/JSONFormatterAssets/back.png");
-  position: absolute;
-  top: 49%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 #backbtn:hover:active {
