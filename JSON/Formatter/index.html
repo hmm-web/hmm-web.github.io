@@ -54,7 +54,7 @@
   </head>
   <body>
     <noscript>javascript is required for the page to function!</noscript>
-    <img id="backbtn" />
+    <img style="content: url('JSONFormatterAssets/back.png')" id="backbtn" />
 
     <div id="selector_page">
       <h2 id="start__title" class="title">JSON Formatter</h2>
@@ -125,12 +125,20 @@
         <div id="textarea_options">
           <div style="opacity: 1 !important" class="small_btns">
             <label for="upload_txt">
-              <img class="small_btns" id="upload_small" />
+              <img
+                style="content: url('JSONFormatterAssets/upload.png')"
+                class="small_btns"
+                id="upload_small"
+              />
             </label>
             <input style="display: none" id="upload_txt" type="file" />
           </div>
         </div>
-        <img class="small_btns" id="copy_small" />
+        <img
+          style="content: url('JSONFormatterAssets/copy.png')"
+          class="small_btns"
+          id="copy_small"
+        />
         <textarea
           placeholder='{"JSON":{"Beautified": false}}'
           autocomplete="off"
