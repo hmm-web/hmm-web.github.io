@@ -54,7 +54,7 @@
   </head>
   <body>
     <noscript>javascript is required for the page to function!</noscript>
-    <img id="backbtn" />
+    <div id="backbtn"><h1 id="backicon">&#x23CE;</h1></div>
 
     <div id="selector_page">
       <h2 id="start__title" class="title">JSON Formatter</h2>
@@ -273,8 +273,12 @@
         <button id="upload_zip_btn" class="button">Start Beautification</button>
       </div>
       <div id="finished">
-        <div id="zip_success"></div>
-        <div id="spinner_zip"></div>
+        <div id="success_holder">
+          <div id="zip_success"><h1 id="tick">&#10003;</h1></div>
+        </div>
+        <div id="spinner_holder">
+          <div id="spinner_zip"></div>
+        </div>
         <div id="contain_zip_bar">
           <div id="loading_zip_bar">
             <div
@@ -311,8 +315,6 @@
         </div>
       </div>
     </div>
-    <script
-      src="JSONFormatterAssets/js/script.js"
-    ></script>
+    <script src="JSONFormatterAssets/js/script.js"></script>
   </body>
 </html>
