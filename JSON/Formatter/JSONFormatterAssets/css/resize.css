@@ -1,0 +1,21 @@
+@media screen and (max-width: 100vh) {
+  /*portrait*/
+  /*.textarea {
+    margin-top: 15%;
+  }*/
+  .title {
+    margin-top: 30%;
+  }
+}
+@media screen and (max-height: 100vw) {
+  /*landscape*/
+  .textarea {
+    margin-top: 2%;
+    max-height: calc(20vw + 20vh);
+    min-height: calc(12vw + 12vh);
+    height: calc(18vw + 18vh);
+  }
+  .start_btns {
+    bottom: calc(20vw - 12vh);
+  }
+}
