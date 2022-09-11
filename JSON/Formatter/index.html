@@ -58,8 +58,12 @@
   </head>
   <body>
     <noscript>javascript is required for the page to function!</noscript>
+    <div id="theme_toggle"><h1 class="centre_txt">●</h1></div>
+    <div
+      onclick="document.getElementById('theme_toggle').style.display = 'none';"
+      id="postprocessing"
+    ></div>
     <img style="content: url('JSONFormatterAssets/back.png')" id="backbtn" />
-
     <div id="selector_page">
       <h2 id="start__title" class="title">JSON Formatter</h2>
       <p style="font-size: calc(1vw + 1vh); color: darkgrey"></p>
@@ -80,7 +84,7 @@
           position: absolute;
           left: 0;
           bottom: 0;
-          color: rgb(120, 120, 120);
+          color: rgb(150, 150, 150);
         "
         href="JSONFormatterAssets/html/acknowledgements.htm"
         >Acknowledgements</a
@@ -91,7 +95,7 @@
           position: absolute;
           right: 0;
           bottom: 0;
-          color: rgb(120, 120, 120);
+          color: rgb(150, 150, 150);
         "
         href="https://www.jsdelivr.com/terms"
         >JSDelivr Terms & Policies</a
