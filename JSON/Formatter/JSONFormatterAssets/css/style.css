@@ -143,7 +143,6 @@ textarea:hover:active {
 }
 
 #copy_small {
-  content: url("/JSONFormatterAssets/copy.png");
   position: absolute;
   z-index: 4;
   width: calc(1.4vw + 1.4vh);
@@ -158,7 +157,6 @@ textarea:hover:active {
   top: calc(0.3vw + 0.3vh);
   right: calc(0.3vw + 0.3vh);
   background: transparent;
-  content: url("/JSONFormatterAssets/upload.png");
 }
 
 ::-webkit-resizer {
@@ -242,7 +240,6 @@ textarea:hover:active {
   position: fixed;
   top: calc(0.1vw + 0.1vh);
   left: calc(0.1vw + 0.1vh);
-  content: url("/JSONFormatterAssets/back.png");
   width: calc(1.5vw + 1.5vh);
   background: rgb(32, 32, 32);
   border: solid calc(0.2vw + 0.2vh) rgb(42, 42, 42);
