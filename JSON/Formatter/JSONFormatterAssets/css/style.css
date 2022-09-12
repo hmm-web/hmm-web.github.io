@@ -366,8 +366,8 @@ textarea:hover:active {
   top: calc(7vw + 7vh);
   left: 50%;
   -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 #zip_success {
@@ -391,8 +391,8 @@ textarea:hover:active {
   top: calc(6vw + 6vh);
   left: 50%;
   -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 #tick {
@@ -401,8 +401,8 @@ textarea:hover:active {
   top: 49%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 @-webkit-keyframes zip_spinner {
@@ -435,8 +435,8 @@ textarea:hover:active {
   overflow: hidden;
   width: 100%;
   -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
   background: rgba(0, 0, 0, 0);
   display: -webkit-box;
   display: -ms-flexbox;
