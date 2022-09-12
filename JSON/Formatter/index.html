@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="JSONFormatterAssets/css/pages.css" />
     <link rel="stylesheet" href="JSONFormatterAssets/css/resize.css" />
     <link rel="icon" href="JSONFormatterAssets/favicon.ico" />
-    <title>JSON Formatter</title>
+    <title>JSON Formatter for MC:BE</title>
     <!-- I apologise for my terrible code. -->
     <script
       src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"
@@ -65,7 +65,7 @@
     ></div>
     <img style="content: url('JSONFormatterAssets/back.png')" id="backbtn" />
     <div id="selector_page">
-      <h2 id="start__title" class="title">JSON Formatter</h2>
+      <h2 id="start__title" class="title">JSON Formatter for MC:BE</h2>
       <p style="font-size: calc(1vw + 1vh); color: darkgrey"></p>
       <div class="start_btns">
         <div id="minify_select" class="select roundy">
@@ -78,28 +78,81 @@
           <h1>Uglifier</h1>
         </div>
       </div>
-      <a
+      <div
         style="
-          user-select: none;
           position: absolute;
-          left: 0;
-          bottom: 0;
-          color: rgb(150, 150, 150);
-        "
-        href="JSONFormatterAssets/html/acknowledgements.htm"
-        >Acknowledgements</a
-      >
-      <a
-        style="
-          user-select: none;
-          position: absolute;
+          bottom: 0.2%;
           right: 0;
-          bottom: 0;
-          color: rgb(150, 150, 150);
+          height: auto;
+          width: 50%;
+          text-align: right;
+          transform: scale(0.7) translate(21%, -22.2%);
+          line-height: calc(1.2vw + 1.2vh);
+          /*overflow-y: scroll;*/
         "
-        href="https://www.jsdelivr.com/terms"
-        >JSDelivr Terms & Policies</a
       >
+        <a
+          style="
+            user-select: none;
+            position: absolute;
+            right: 0;
+            bottom: calc(1.5vw + 1.5vh);
+            font-size: calc(1vw + 1vh);
+            color: rgb(150, 150, 150);
+          "
+          href="https://www.jsdelivr.com/terms"
+          >JSDelivr Terms & Policies</a
+        >
+        <a
+          style="
+            user-select: none;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            font-size: calc(1vw + 1vh);
+            color: rgb(150, 150, 150);
+          "
+          href="JSONFormatterAssets/html/licenses.htm"
+          >Licenses</a
+        >
+      </div>
+      <div
+        style="
+          position: absolute;
+          bottom: 0.2%;
+          left: 0;
+          height: auto;
+          width: 90%;
+          text-align: left;
+          line-height: calc(1vw + 1vh);
+          transform: scale(0.7) translate(-20.5%, 22%);
+          /*overflow-y: scroll;*/
+        "
+      >
+        <a
+          style="
+            user-select: none;
+            text-align: left;
+            font-size: calc(1vw + 1vh);
+            color: rgb(150, 150, 150);
+            text-decoration: none;
+          "
+          href="https://www.minecraft.net/en-us/terms#terms-brand_guidelines"
+          >This application is not affiliated in any way with Mojang Synergies
+          AB. The Minecraft Name, the Minecraft Brand and the Minecraft Assets
+          are all property of Mojang Synergies AB or their respectful owner.</a
+        >
+        <span
+          style="
+            user-select: none;
+            text-align: left;
+            font-size: calc(1vw + 1vh);
+            color: rgb(150,152,160);
+            text-decoration: underline;
+          "
+          >http://www.minecraft.net/en-us/terms#terms-brand_guidelines</span
+        >
+      </div>
     </div>
 
     <div id="start_page">
@@ -218,7 +271,7 @@
             font-size: calc(0.7vw + 0.7vh);
           "
         >
-          (JSON files can use different file extensions.)
+          (JSON files can use different file extensions).
         </p>
         <input
           placeholder="File extension filter."
@@ -259,7 +312,7 @@
           "
         >
           (Lower is faster but bigger and higher is smaller but heavier for weak
-          devices.)
+          devices).
         </p>
         <input
           placeholder="Compression level."
@@ -284,7 +337,7 @@
           "
           id="remove_zip_note"
         >
-          (Zip feature may cause freezing and lag with big files/weak devices.)
+          (Zip feature may cause freezing and lag with big files/weak devices).
         </p>
         <button id="upload_zip_btn" class="button">Start Beautification</button>
       </div>
