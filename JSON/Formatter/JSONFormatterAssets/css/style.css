@@ -131,7 +131,7 @@ textarea:hover:active {
 }
 
 .small_btns {
-  opacity: 0.4;
+  opacity: 0.55;
   -webkit-transition: opacity 0.1s;
   -o-transition: opacity 0.1s;
   transition: opacity 0.1s;
@@ -142,7 +142,7 @@ textarea:hover:active {
 }
 
 .small_btns:hover:active {
-  opacity: 0.6;
+  opacity: 0.62;
 }
 
 #copy_small {
@@ -232,6 +232,7 @@ textarea:hover:active {
   border: solid calc(0.2vw + 0.2vh) rgb(42, 42, 42);
   border-radius: calc(0.3vw + 0.3vh);
   padding: calc(0.8vw + 0.8vh);
+  padding-top: calc(0.75vw + 0.75vh);
   z-index: 40;
   display: none;
   -webkit-transition: background 0.1s;
@@ -476,31 +477,31 @@ textarea:hover:active {
 
 ::-webkit-input-placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: rgb(120, 120, 120);
+  color: rgb(130, 130, 130);
   opacity: 0.75; /* Firefox */
 }
 
 ::-moz-placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: rgb(120, 120, 120);
+  color: rgb(130, 130, 130);
   opacity: 0.75; /* Firefox */
 }
 
 :-ms-input-placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: rgb(120, 120, 120);
+  color: rgb(130, 130, 130);
   opacity: 0.75; /* Firefox */
 }
 
 ::-ms-input-placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: rgb(120, 120, 120);
+  color: rgb(130, 130, 130);
   opacity: 0.75; /* Firefox */
 }
 
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: rgb(120, 120, 120);
+  color: rgb(130, 130, 130);
   opacity: 0.75; /* Firefox */
 }
 
@@ -525,6 +526,7 @@ textarea:hover:active {
   border: solid calc(0.2vw + 0.2vh) rgb(42, 42, 42);
   border-radius: calc(0.3vw + 0.3vh);
   padding: calc(0.8vw + 0.8vh);
+  padding-top: calc(0.75vw + 0.75vh);
   z-index: 40;
   -webkit-transition: background 0.1s;
   -o-transition: background 0.1s;
