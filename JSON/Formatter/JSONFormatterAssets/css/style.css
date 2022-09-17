@@ -277,7 +277,8 @@ textarea:hover:active {
 #selector {
   position: absolute;
   font-weight: 500;
-  bottom: calc(0.1vw + 0.1vh);
+  font-size: calc(1vw + 1vh);
+  bottom: calc(1.5vw + 1.5vh);
   left: calc(0.1vw + 0.1vh);
   width: auto;
   height: auto;
