@@ -33,6 +33,7 @@
     <link rel="icon" href="JSONFormatterAssets/favicon.ico" />
     <title>JSON Formatter</title>
     <!-- I apologise for my terrible code. -->
+
     <script
       src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"
       crossorigin="anonymous"
@@ -63,74 +64,15 @@
       onclick="document.getElementById('theme_toggle').style.display = 'none';"
       id="postprocessing"
     ></div>
-    <img style="content: url('JSONFormatterAssets/back.png')" id="backbtn" />
-    <div id="selector_page">
-      <h2 id="start__title" class="title">JSON Formatter</h2>
-      <p style="font-size: calc(1vw + 1vh); color: darkgrey"></p>
-      <div class="start_btns">
-        <div id="minify_select" class="select roundy">
-          <h1>Minifier</h1>
-        </div>
-        <div id="beautify_select" class="select roundy">
-          <h1 href="#">Beautifier</h1>
-        </div>
-        <div id="uglify_select" class="select roundy">
-          <h1>Uglifier</h1>
-        </div>
-      </div>
-      <a
-        style="
-          user-select: none;
-          position: absolute;
-          right: 0;
-          bottom: 0;
-          font-size: calc(1vw + 1vh);
-          color: rgb(170, 170, 170);
-        "
-        href="https://www.jsdelivr.com/terms"
-        >JSDelivr Terms & Policies</a
-      >
-      <a
-        style="
-          user-select: none;
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          font-size: calc(1vw + 1vh);
-          color: rgb(170, 170, 170);
-        "
-        href="JSONFormatterAssets/html/licenses.htm"
-        >Licenses</a
-      >
-    </div>
-
-    <div id="start_page">
-      <h2 id="start_title" class="title">JSON Beautifier</h2>
-      <div class="start_btns">
-        <div id="txtpagebtn" class="select">
-          <img
-            style="
-              height: 80%;
-              content: url('JSONFormatterAssets/txt.png');
-              margin-right: 8%;
-            "
-          />
-          <span>Text</span>
-        </div>
-        <div id="uppagebtn" class="select">
-          <img
-            style="
-              height: 81%;
-              content: url('JSONFormatterAssets/zip.png');
-              margin-right: 8%;
-            "
-          />
-          <span>Zip</span>
-        </div>
-      </div>
-    </div>
     <div id="single_json">
-      <h2 id="title2" class="title">JSON Beautifier</h2>
+      <div id="backbtn2">Batch Zip Upload</div>
+      <select id="selector" name="formatter_type">
+        <option value="Deobfuscator">Choose formatter type...</option>
+        <option value="Deobfuscator">Beautifier</option>
+        <option value="Minifier">Minifier</option>
+        <option value="Obfuscator">Uglifier</option>
+      </select>
+      <h2 id="title2" class="title">JSON Formatter</h2>
       <div class="textarea">
         <div id="textarea_options">
           <div style="opacity: 1 !important" class="small_btns">
@@ -184,14 +126,69 @@
         "
         id="err0r"
       ></p>
+      <div id="file_reader_not_supported"></div>
     </div>
 
     <div id="zip_json">
-      <h2 id="uploadtitle" class="title">JSON Beautifier</h2>
+      <img style="content: url('JSONFormatterAssets/back.png')" id="backbtn" />
+      <h2 id="uploadtitle" class="title">Batch Zip Upload</h2>
+      <input
+        class="textbox"
+        style="display: none"
+        id="uploadzip_url"
+        autocapitalize="off"
+        spellcheck="false"
+        autocorrect="off"
+        placeholder="or enter URL instead."
+      />
+      <div class="button" id="upload_zip_txt_change" style="display: none">
+        <p
+          style="
+            font-size: calc(1.5vw + 1.5vh);
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+          "
+        >
+          Using URL
+        </p>
+      </div>
       <label for="upload_zip_input">
-        <div class="button" id="uploadzip">Upload Zip</div>
-        <input style="display: none" id="upload_zip_input" type="file" />
+        <div class="button" id="uploadzip">
+          <p
+            style="
+              font-size: calc(1.5vw + 1.5vh);
+              text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              -webkit-transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+            "
+          >
+            Upload Zip
+          </p>
+        </div>
+        <p
+          style="
+            color: grey;
+            margin: calc(0.2vw + 0.2vh);
+            font-size: calc(0.95vw + 0.95vh);
+            position: absolute;
+            bottom: calc(0.1vw + 0.1vh);
+            left: calc(0.1vw + 0.1vh);
+          "
+          id="indicator_drag"
+        >
+          Selected: Beautifier
+        </p>
       </label>
+      <input style="display: none" id="upload_zip_input" type="file" />
       <div id="zipoptions">
         <h3>Options</h3>
         <hr
