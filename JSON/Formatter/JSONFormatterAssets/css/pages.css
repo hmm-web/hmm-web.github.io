@@ -16,6 +16,7 @@
   height: 100%;
   width: 100%;
   z-index: 1;
+  display: none;
   background: rgb(21, 21, 21);
 }
 
@@ -27,7 +28,7 @@
   width: 100%;
   z-index: 3;
   background: rgb(21, 21, 21);
-  display: none;
+  /*display: none;*/
 }
 
 #zip_json {
